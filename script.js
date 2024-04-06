@@ -5,7 +5,7 @@ const searchButton = document.getElementById('search-button');
 const searchResults = document.getElementById('search-results');
 const fav =  document.getElementById('fav');
 const reset = document.getElementById('reset');
-// Initialize an empty array to store fav meals
+// Initialize an empty array to store fav meals and to store data into favorites 
 
 let favoritesList=JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -135,7 +135,7 @@ function showFav(){
 
     }
     mealElement.appendChild(mealIngredients);
-     
+    //add remove button to favorites meals
     const removeButton = document.createElement('button');
       removeButton.innerHTML = '<i class="fas fa-trash"></i> Remove from Favorites';
       removeButton.addEventListener('click', () => {
